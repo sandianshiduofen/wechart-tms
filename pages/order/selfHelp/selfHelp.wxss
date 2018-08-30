@@ -1,0 +1,172 @@
+/* pages/order/selfHelp/selfHelp.wxss */
+page{
+  background: #F2F2F2;
+}
+.selfHelp{
+  width: 100%;
+}
+.address{
+  box-sizing: border-box;
+  background: #fff;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.sender{
+  display: flex;
+  min-height: 126rpx;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 10rpx 0;
+  margin: 0 26rpx;
+}
+
+.sender:last-child{
+  border: none;
+}
+
+.add_icon{
+  height: 44rpx;
+  width: 36rpx;
+  margin-right: 20rpx;
+}
+
+.addr_content{
+  width: 470rpx;
+}
+
+.addr_book{
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #6abceb;
+  border-radius: 5rpx;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addr_book image{
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 5rpx;
+}
+
+
+.goods_info{
+  background: #fff;
+  padding: 0 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.goods_name{
+  line-height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+.goods_name:last-child{
+  border: none;
+}
+
+.goods_input{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 520rpx;
+}
+
+.amount_input{
+  width: 174rpx;
+  float: right;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  text-align: center;
+  height: 46rpx;
+  line-height: 46rpx;
+}
+.amount_input text{
+  width: 58rpx;
+}
+.amount_input input{
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  width: 68rpx;
+}
+.collection_input{
+  background: #FAFAFA;
+  width: 500rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+}
+
+.nearbydot{
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.reminder{
+  height: 72rpx;
+  line-height: 72rpx;
+  padding: 0 26rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.dot_list{
+  display: flex;
+  padding: 10rpx 26rpx;
+  border-bottom: 1px solid #eee;
+}
+.dot_left{
+  padding-top: 10rpx;
+}
+.dot_left view{
+  width: 24rpx;
+  height: 24rpx;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.dot_left view.checked{
+  background: red;
+  border-color: red;
+}
+.dot_left radio{
+  visibility: hidden;
+  position: absolute;
+}
+
+.dot_top{
+  display: flex;
+}
+
+.dot_top_left{
+  width: 420rpx;
+}
+.dot_top_right{
+  height: 80rpx;
+  width: 216rpx;
+  position: relative;
+}
+.dot_top_right image{
+  height: 80rpx;
+  width: 216rpx;
+}
+.dot_top_right view{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80rpx;
+  width: 216rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 34rpx;
+  padding-top: 10rpx;
+}
+/* .dot_top_right view.close{
+  
+} */
+.dot_top_right view text{
+  display: block;
+}

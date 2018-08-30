@@ -1,0 +1,45 @@
+/* pages/ucenter/contactNumber/contactNumber.wxss */
+.explain{
+  background: #ffebb0;
+  padding: 10rpx 30rpx;
+  font-size: 26rpx;
+}
+
+.list{
+  padding-top:90rpx;
+  display: flex;
+}
+
+.list .c999{
+  width: 250rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+.tel{
+  width: 300rpx;
+}
+
+.edit{
+  width: 100rpx;
+}
+
+.edit image{
+  display: block;
+  width: 45rpx;
+  height: 45rpx;
+}
+
+
+.del{
+  width: 100rpx;
+}
+
+.del image{
+  display: block;
+  width: 35rpx;
+  height: 45rpx;
+}
+
+.foot_btn{
+  padding: 200rpx 50rpx 50rpx;
+}

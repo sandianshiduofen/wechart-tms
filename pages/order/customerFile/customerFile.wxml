@@ -1,0 +1,27 @@
+<!--pages/order/customerFile/customerFile.wxml-->
+<view class='customerFile'>
+  <view class='reminder'>共检索出{{customerNumber}}个客户信息</view>
+  <view class='customer' wx:if="{{list.length>0}}">
+    <view class='list' wx:for="{{list}}" wx:key="{{index}}" bindtap='chooseCustomer' data-index='{{index}}'>
+      <view class='li'>
+        <text>客户名称：</text>
+        <text>{{item.guestName}}</text>
+      </view>
+      <view class='li'>
+        <text decode="{{true}}">联&ensp;系&ensp;人：</text>
+        <text>{{item.linkman}}<text class='choose'>选择</text></text>
+      </view>
+      <view class='li'>
+        <text decode="{{true}}">电&emsp;&emsp;话：</text>
+        <text>{{item.tel}}</text>
+      </view>
+      <view class='li'>
+        <text decode="{{true}}">地&emsp;&emsp;址：</text>
+        <text>{{item.provinceName}} {{item.cityName}} {{item.areaName}} {{item.address}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='customer' wx:else>
+    <view class='noDate'>没找到客户信息</view>
+  </view>
+</view>

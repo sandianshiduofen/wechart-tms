@@ -1,0 +1,91 @@
+/* pages/order/receivingDetails/receivingDetails.wxss */
+
+.state{
+  display: flex;
+  border-bottom: 1px solid #eee;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #fff;
+  padding: 20rpx 40rpx;
+}
+.state image{
+  margin-left: 100rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.waybill{
+  background: #fff;
+  padding:20rpx 40rpx;
+  max-height: 500rpx;
+  width: 670rpx;
+}
+
+.waybill .list{
+  border-bottom: 1px dashed #ddd;
+  padding: 10rpx 0;
+}
+.waybill .list view{
+  color: #999;
+}
+.waybill .list:first-child view{
+  color: #6abceb;
+}
+
+.dot_wraper{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.dot{
+  width: 600rpx;
+  padding:15rpx 40rpx;
+}
+
+.dot_company{
+  line-height: 70rpx;
+}
+
+.dot_company image{
+  height: 45rpx;
+  width: 45rpx;
+  margin: 0 0 -10rpx 40rpx;
+}
+
+.goto image{
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.content{
+  padding: 0 40rpx;
+  line-height: 85rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.content view{
+  border-bottom: 1px solid #eee;
+  display: flex;
+  position: relative;
+  color: #666;
+}
+
+.content navigator{
+  border-radius: 10rpx;
+  border: 1px solid #ddd;
+  float: right;
+  width: 160rpx;
+  font-size: 28rpx;
+  padding:0 10rpx;
+  line-height: 65rpx;
+  position: absolute;
+  right: 40rpx;
+  top: 10rpx;
+  text-align: center;
+}
+
+.content view text:first-child{
+  width: 60%;
+}

@@ -1,0 +1,27 @@
+/* pages/ucenter/shippingDetails/shippingDetails.wxss */
+
+@import "../../chengshi/chengshi.wxss";
+.list{
+  padding: 10rpx;
+  display: flex;
+  margin: 0 20rpx;
+  border-bottom: 1px solid #ddd;
+}
+.list_name{
+  text-align: right;
+  width: 180rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.list_input input{
+  height: 80rpx;
+  width: 500rpx;
+}
+.list_input view{
+  height: 80rpx;
+  width: 500rpx;
+  line-height: 80rpx;
+}
+.foot_btn{
+  margin-top: 150rpx;
+}

@@ -1,0 +1,44 @@
+/* pages/order/waybillBarshare/waybillBarshare.wxss */
+page{
+  background: #fff;
+}
+.logo{
+  padding: 20rpx 0 40rpx;
+}
+.logo image{
+  width: 297rpx;
+  height: 244rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.content{
+  padding:0 40rpx;
+  line-height: 60rpx;
+}
+.content view{
+  display: flex;
+}
+.content text{
+  width: 50%;
+}
+
+.barCode{
+  padding: 60rpx 0 0;
+  text-align: center;
+}
+.canvas1{
+  width: 600rpx;
+  height: 220rpx;
+  display: block;
+  margin: 0 auto;
+}
+.barCode view{
+  font-size: 36rpx;
+  padding-top: 10rpx;
+}
+
+.serviceStation{
+  padding: 60rpx 60rpx;
+  line-height: 60rpx;
+}

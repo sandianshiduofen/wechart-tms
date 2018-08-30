@@ -1,0 +1,60 @@
+/* pages/ucenter/account/addBank/addBank.wxss */
+.explain{
+  padding: 20rpx 30rpx 15rpx;
+  color: #666;
+}
+
+.explain_b{
+  font-size: 26rpx;
+  color: #999;
+  padding: 0 30rpx;
+}
+
+.holder{
+  margin: 20rpx 30rpx;
+  display: flex;
+  line-height: 60rpx;
+  height: 60rpx;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx 0;
+}
+
+.holder text{
+  width: 140rpx;
+  font-size: 34rpx;
+  padding-left: 20rpx;
+}
+.holder input{
+  width: 500rpx;
+  font-size: 34rpx;
+  
+}
+.pColor{
+  color: #ccc;
+}
+.bankType{
+  padding: 0 40rpx;
+  font-size: 30rpx;
+}
+
+.deal{
+  padding: 20rpx 40rpx;
+}
+
+.deal navigator{
+  display: inline-block;
+}
+
+.checkbox{
+  display: inline-block;
+}
+.checkbox checkbox{
+  color: #333;
+}
+
+.tixing{
+  color: #999;
+  padding: 100rpx 0 50rpx;
+  text-align: center;
+  font-size: 26rpx;
+}

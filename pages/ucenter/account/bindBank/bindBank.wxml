@@ -1,0 +1,16 @@
+<!--pages/ucenter/account/bindBank/bindBank.wxml-->
+
+<import src="../../../../modules/payPassword/payPassword.wxml"/>
+<view class='bindBank'>
+  <view class='bindBank_t'>
+    <view class='title'>{{bankOwned}}</view>
+    <view class='type'>{{cardtype}}</view>
+    <view class='number'>{{bankNo}}</view>
+  </view>
+  <view class='foot_btn'>
+    <button class='b_green' bindtap='changeBank'>更换银行卡</button>
+  </view>
+</view>
+
+<template is="pay-password" data="{{showPayPwdInput,pwdVal,payFocus}}"/>
+

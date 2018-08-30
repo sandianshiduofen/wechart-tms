@@ -1,0 +1,8 @@
+/* pages/ucenter/ticket/useRules/useRules.wxss */
+.useRules{
+  padding: 30rpx;
+  line-height: 65rpx;
+}
+.useRules view{
+  color: #666;
+}

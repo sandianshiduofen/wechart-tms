@@ -1,0 +1,14 @@
+/* pages/ucenter/headimg/headimg.wxss */
+.imgShow{
+  width: 100%;
+  height: 750rpx;
+}
+.imgShow image{
+  width: 100%;
+  height: 750rpx;
+}
+
+.Thidden{
+  visibility: hidden;
+  position: absolute;
+}

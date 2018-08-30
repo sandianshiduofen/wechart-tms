@@ -1,0 +1,3 @@
+/* pages/order/receivingRecord/receivingRecord.wxss */
+@import "../../../modules/order-filtrate/order-filtrate.wxss";
+@import "../takeDelivery/takeDelivery.wxss";

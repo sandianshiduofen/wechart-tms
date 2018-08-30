@@ -1,0 +1,200 @@
+<!--pages/order/selfHelp/selfHelp.wxml-->
+<!-- 新增编辑订单 -->
+<view class='selfHelp' wx:if="{{status==0}}">
+  <view class='address'>
+    <view class='sender'>
+      <image class='add_icon' src='../../../sources/images/addr1.png'></image>
+      <view class='addr_content c999' bindtap='senderEdit'>
+        <view  wx:if="{{!sender.company}}" class='c999'>
+          输入发件人的联系方式和详细地址
+        </view>
+        <view wx:else>
+          <view>{{sender.company}}</view>
+          <view>{{sender.contact?sender.contact:""}} {{sender.phone}}</view>
+          <view>{{sender.proName}}{{sender.cityName}}{{sender.areaName}}{{sender.detailed}}</view>
+        </view>
+      </view>
+      <view class='addr_book' bindtap='senderBook'>
+        <image src='../../../sources/images/search2.png'></image>地址薄
+      </view>
+    </view>
+    <view class='sender'>
+      <image class='add_icon' src='../../../sources/images/addr1.png'></image>
+      <view class='addr_content' bindtap='receiverEdit'>
+        <view  wx:if="{{!receiver.company}}" class='c999'>
+          输入收件人的联系方式和详细地址
+        </view>
+        <view wx:else>
+          <view>{{receiver.company}}</view>
+          <view>{{receiver.contact?receiver.contact:""}} {{receiver.phone}}</view>
+          <view>{{receiver.proName}}{{receiver.cityName}}{{receiver.areaName}}{{receiver.detailed}}</view>
+        </view>
+      </view>
+      <view class='addr_book' bindtap='receiverBook'>
+        <image src='../../../sources/images/search2.png'></image>
+      地址薄</view>
+    </view>
+  </view>
+  <view class='goods_info'>
+    <view class='goods_name'>
+      <text><text class='f_red'>*</text>货物信息：</text>
+      <input class='goods_input' bindinput='goodsNameInput' type='text' placeholder='请填写货物名称' placeholder-style='cccc' maxlength='50' value='{{goodsName}}'/>
+    </view>
+    <view class='goods_name'>
+      <text><text class='f_red'>*</text>包裹数量：</text>
+      <view class='amount_input'>
+        <text wx:if="{{goodsQuantity<=1}}" class="cccc">-</text>
+        <text wx:else bindtap='goodsQuantityReduce'>-</text>
+        <input type='number' bindinput='goodsQuantityInteger' bindblur='goodsQuantityOne' value='{{goodsQuantity}}' maxlength='3'/>
+        <text wx:if="{{goodsQuantity>=999}}" class="cccc">+</text>
+        <text wx:else bindtap='goodsQuantityIncrease'>+</text>
+      </view>
+    </view>
+    <view class='goods_name collection'>
+      <text>代收货款</text>
+      <input type='digit' class='collection_input' placeholder='0.00' bindinput='collectionDelivery' maxlength='10' value='{{goodsAmount}}'/>
+      <text>元</text>
+    </view>
+  </view>
+  <view class='nearbydot'>
+    <view class='reminder'>附近可揽货网点：共为您匹配到 <text class='f_red'>{{bannceList.length}}</text> 家可揽货网点</view>
+    <view class='dot_warper'>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio dot_list" wx:for='{{bannceList}}' wx:key="{{index}}">
+          <view class='dot_left'>
+            <radio value="{{item.id}}" checked="{{item.checked}}"/>
+            <view class='{{item.checked}}'></view>
+          </view>
+          <view class='dot_right'>
+            <view class='dot_top'>
+              <view class='dot_top_left'>
+                <view>{{item.name}}</view>
+                <view>网点电话： 
+                  <text wx:if="{{item.tel1}}" class='f_green' catchtap='callPhone' data-tel="{{item.tel1}}">{{item.tel1}}</text>
+                  <text wx:if="{{item.tel2}}" class='f_green' catchtap='callPhone' data-tel="{{item.tel2}}">;{{item.tel2}}</text>
+                  <text wx:if="{{item.tel3}}" class='f_green' catchtap='callPhone' data-tel="{{item.tel3}}">;{{item.tel3}}</text>
+                </view>
+              </view>
+              <view class='dot_top_right'>
+                <image wx:if="{{item.inBusiness}}" src='../../../sources/images/kai.gif'></image>
+                <image wx:else src='../../../sources/images/xiu.gif'></image>
+                <view>
+                  <text>揽货时间</text>
+                  <text>{{item.startBusinessHour}}-{{item.endBusinessHour}}</text>
+                </view>
+              </view>
+            </view>
+            <view class='dot_bottom'>
+              营业地址：{{item.province}}{{item.city}}{{item.area}}{{item.address}}
+            </view>
+          </view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <view class='footer_btn'>
+    <button class='b_green cfff'  wx:if="{{goodsName&&goodsQuantity&&inputDotId}}" bindtap='orderSubmit'>提交运单</button>
+    <button class='cfff bccc' wx:else>提交运单</button>
+  </view>
+</view>
+
+<!-- 编辑代收货款时 -->
+<view wx:else class='selfHelp'>
+  <view class='address' style='opacity: 0.6'>
+    <view class='sender'>
+      <image class='add_icon' src='../../../sources/images/addr1.png'></image>
+      <view class='addr_content c999'>
+        <view  wx:if="{{!sender.company}}" class='c999'>
+          输入发件人的联系方式和详细地址
+        </view>
+        <view wx:else>
+          <view>{{sender.company}}</view>
+          <view><text>{{sender.contact?sender.contact:""}}</text> {{sender.phone}}</view>
+          <view>{{sender.proName}}{{sender.cityName}}{{sender.areaName}}{{sender.detailed}}</view>
+        </view>
+      </view>
+      <view class='addr_book'>
+        <image src='../../../sources/images/search2.png'></image>地址薄
+      </view>
+    </view>
+    <view class='sender'>
+      <image class='add_icon' src='../../../sources/images/addr1.png'></image>
+      <view class='addr_content'>
+        <view  wx:if="{{!receiver.company}}" class='c999'>
+          输入收件人的联系方式和详细地址
+        </view>
+        <view wx:else>
+          <view>{{receiver.company}}</view>
+          <view>{{receiver.contact?receiver.contact:""}}{{receiver.phone}}</view>
+          <view>{{receiver.proName}}{{receiver.cityName}}{{receiver.areaName}}{{receiver.detailed}}</view>
+        </view>
+      </view>
+      <view class='addr_book'>
+        <image src='../../../sources/images/search2.png'></image>
+      地址薄</view>
+    </view>
+  </view>
+  <view class='goods_info'>
+    <view class='goods_name'  style='opacity: 0.6'>
+      <text><text class='f_red'>*</text>货物信息：</text>
+      <input class='goods_input' bindinput='goodsNameInput' type='text' placeholder='请填写货物名称' placeholder-style='cccc' maxlength='50' value='{{goodsName}}'  disabled='true'/>
+    </view>
+    <view class='goods_name' style='opacity: 0.6'>
+      <text><text class='f_red'>*</text>包裹数量：</text>
+      <view class='amount_input'>
+        <text wx:if="{{goodsQuantity<=1}}" class="cccc">-</text>
+        <text wx:else>-</text>
+        <input type='number' bindinput='goodsQuantityInteger' bindblur='goodsQuantityOne' value='{{goodsQuantity}}' maxlength='3' disabled='true'/>
+        <text wx:if="{{goodsQuantity>=999}}" class="cccc">+</text>
+        <text wx:else>+</text>
+      </view>
+    </view>
+    <view class='goods_name collection'>
+      <text>代收货款</text>
+      <input type='digit' class='collection_input' placeholder='0.00' bindinput='collectionDelivery' maxlength='10' value='{{goodsAmount}}'/>
+      <text>元</text>
+    </view>
+  </view>
+  <view class='nearbydot' style='opacity: 0.6'>
+    <view class='reminder'>附近可揽货网点：共为您匹配到 <text class='f_red'>{{bannceList.length}}</text> 家可揽货网点</view>
+    <view class='dot_warper'>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio dot_list" wx:for='{{bannceList}}' wx:key="{{index}}">
+          <view class='dot_left'>
+            <radio value="{{item.id}}" checked="{{item.checked}}" disabled="true"/>
+            <view class='{{item.checked}}'></view>
+          </view>
+          <view class='dot_right'>
+            <view class='dot_top'>
+              <view class='dot_top_left'>
+                <view>{{item.name}}</view>
+                <view>网点电话： 
+                  <text wx:if="{{item.tel1}}" class='f_green' catchtap='callPhone' data-tel="{{item.tel1}}">{{item.tel1}}</text>
+                  <text wx:if="{{item.tel2}}" class='f_green' catchtap='callPhone' data-tel="{{item.tel2}}">;{{item.tel2}}</text>
+                  <text wx:if="{{item.tel3}}" class='f_green' catchtap='callPhone' data-tel="{{item.tel3}}">;{{item.tel3}}</text>
+                </view>
+              </view>
+              <view class='dot_top_right'>
+                <image wx:if="{{item.inBusiness}}" src='../../../sources/images/kai.gif'></image>
+                <image wx:else src='../../../sources/images/xiu.gif'></image>
+                <view>
+                  <text>揽货时间</text>
+                  <text>{{item.startBusinessHour}}-{{item.endBusinessHour}}</text>
+                </view>
+              </view>
+            </view>
+            <view class='dot_bottom'>
+              营业地址：{{item.province}}{{item.city}}{{item.area}}{{item.address}}
+            </view>
+          </view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <view class='footer_btn'>
+    <button class='b_green cfff'  wx:if="{{goodsName&&goodsQuantity&&inputDotId}}" bindtap='orderSubmit'>提交运单</button>
+    <button class='cfff bccc' wx:else>提交运单</button>
+  </view>
+</view>

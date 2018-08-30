@@ -1,0 +1,42 @@
+/* pages/ucenter/account/telCode/telCode.wxss */
+
+page{
+  background-color: #efeff4;
+}
+
+.telCode_t{
+  padding: 15rpx 30rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.code{
+  background: #fff;
+  display: flex;
+  margin: 30rpx 0;
+}
+.code input{
+  width: 420rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding-left: 30rpx;
+}
+.code button{
+  width: 300rpx;
+  padding: 0;
+  line-height: 90rpx;
+  height: 90rpx;
+  background: #fff;
+  border: 2rpx solid #50b4ea;
+  color: #50b4ea;
+  font-size: 38rpx;
+}
+
+.explain{
+  padding: 50rpx 30rpx;
+}
+.explain view{
+  font-size: 26rpx;
+  line-height: 60rpx;
+  color: #999;
+}

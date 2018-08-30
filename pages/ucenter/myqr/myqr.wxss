@@ -1,0 +1,32 @@
+/* pages/ucenter/myqr/myqr.wxss */
+.myqr{
+  text-align: center;
+  line-height: 70rpx;
+}
+.myqr_company{
+  padding-top: 120rpx;
+}
+.myqr_tel{
+  font-size: 42rpx;
+}
+.myqr_qr{
+  height: 400rpx;
+  width: 400rpx;
+  margin: 30rpx  auto;
+}
+
+.canvas{
+  height: 160px;
+  width: 160px;
+  display: block;
+  margin: 0 auto;
+}
+.myqr_text{
+  color: #888;
+}
+
+.canvas-box{
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+}

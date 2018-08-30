@@ -1,0 +1,49 @@
+/* pages/ucenter/account/withdraw/withdraw.wxss */
+
+@import "../../../../modules/payPassword/payPassword.wxss";
+.withdraw{
+  padding: 0 30rpx;
+}
+.cart_num{
+  padding:20rpx 30rpx 10rpx;
+  border-bottom:1px solid #ccc; 
+}
+.cart_num view{
+  color: #999;
+  font-size: 26rpx;
+}
+.price{
+  padding: 0 30rpx;
+}
+.tit{
+  padding-top: 20rpx;
+}
+.price_num{
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #ccc;
+  height: 80rpx;
+}
+.price_num text{
+  width: 100rpx;
+  font-size: 60rpx;
+  font-weight: bold;
+}
+.price_num input{
+  width: 500rpx;
+  height:90rpx;
+  line-height: 90rpx;
+  font-size: 40rpx;
+}
+
+.price_num image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+.usable{
+  padding-top: 20rpx;
+}
+.foot_btn{
+  padding-top: 50rpx;
+}

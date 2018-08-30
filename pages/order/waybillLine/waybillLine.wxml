@@ -1,0 +1,7 @@
+<!--pages/order/waybillLine/waybillLine.wxml-->
+<view class='waybillLine' catchtap='goBack'>
+  <view class='way'>
+    <canvas canvas-id="barcode"/>
+    <view>{{waybill}}</view>
+  </view>
+</view>

@@ -1,0 +1,113 @@
+/* pages/order/takeDelivery/takeDelivery.wxss */
+
+@import "../../../modules/order-filtrate/order-filtrate.wxss";
+
+.nav{
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+}
+.nav_list{
+  font-size: 28rpx;
+  text-align: center;
+  width: 50%;
+  background: #fff;
+}
+
+.nav_list.current{
+  color: #50B3EA;
+  border-bottom: 1px solid #50B3EA;
+}
+
+/* .nav_list:first-child{
+  border-right: 1px solid #ddd;
+} */
+
+.filtrates{
+  height: 80rpx;
+  margin-top: 21rpx;
+  background: #fff;
+  padding: 0 20rpx;
+  display: flex;
+}
+
+scroll-view{
+  height: 80rpx;
+  white-space: nowrap;
+}
+scroll-view text{
+  display: inline-block;
+  padding:0 10rpx;
+  background: #ccc;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 10rpx 10rpx 10rpx 0;
+  color: #fff;
+}
+.filtrates_btn{
+  height: 60rpx;
+  margin: 10rpx 20rpx;
+  color: #fff;
+  line-height: 60rpx;
+  padding: 0 15rpx;
+
+}
+.filtrates_btn image{
+  height: 40rpx;
+  width: 40rpx;
+  margin:0 10rpx -8rpx 5rpx;
+  
+}
+
+.list{
+  background: #fff;
+  margin-top: 20rpx;
+  padding: 20rpx 35rpx;
+}
+
+.dot_state{
+  display: flex;
+}
+.dot{
+  width: 570rpx;
+}
+.company_tel image{
+  height: 45rpx;
+  width: 45rpx;
+}
+/* .state{
+
+} */
+
+.number_num{
+  display: flex;
+}
+.order_num{
+  width: 400rpx;
+}
+
+.company_tel{
+  display: flex;
+}
+.company{
+  width: 620rpx;
+}
+.order_btm{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1px solid #eee;
+  margin-top: 15rpx;
+}
+
+.order_btm navigator{
+  float: right;
+  margin-left: 30rpx;
+}
+
+.more{
+  text-align: center;
+  color: #999;
+  padding:20rpx 0; 
+}
+
+

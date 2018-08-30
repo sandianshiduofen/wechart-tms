@@ -1,0 +1,95 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/ucenter/ucenter/ucenter",
+    "pages/ucenter/resetPassword/resetPassword",
+    "pages/ucenter/account/account",
+    "pages/ucenter/account/telCode/telCode",
+    "pages/ucenter/account/addBank/addBank",
+    "pages/ucenter/account/payDeal/payDeal",
+    "pages/ucenter/account/setPassword/setPassword",
+    "pages/ucenter/account/bankSuccess/bankSuccess",
+    "pages/ucenter/account/changeSuccess/changeSuccess", 
+    "pages/ucenter/account/withdraw/withdraw",
+    "pages/ucenter/account/withdrawSuccess/withdrawSuccess",
+    "pages/ucenter/account/billing/billing",
+    "pages/ucenter/account/billing/filtrate/filtrate",
+    "pages/ucenter/account/passwordList/passwordList",
+    "pages/ucenter/account/bindBank/bindBank",
+    "pages/ucenter/ticket/ticket",
+    "pages/ucenter/ticket/useRules/useRules",
+    "pages/ucenter/ticket/ticketQr/ticketQr",
+    "pages/ucenter/myqr/myqr",
+    "pages/ucenter/headimg/headimg",
+    "pages/ucenter/headimg/upload/upload",
+    "pages/ucenter/shippingAddress/shippingAddress",
+    "pages/ucenter/shippingDetails/shippingDetails",
+    "pages/ucenter/deliveryAddress/deliveryAddress",
+    "pages/ucenter/deliveryDetails/deliveryDetails",
+    "pages/ucenter/contactNumber/contactNumber",
+    "pages/ucenter/contactEdit/contactEdit",
+
+    "pages/order/takeDelivery/takeDelivery",
+    "pages/order/receivingRecord/receivingRecord",
+    "pages/order/selfHelp/selfHelp",
+    "pages/order/orderSuccess/orderSuccess",
+    "pages/order/customerFile/customerFile",
+    "pages/order/shippingDetails/shippingDetails",
+    "pages/order/deliveryDetails/deliveryDetails",
+    "pages/order/waybillBarshare/waybillBarshare",
+    "pages/order/waybillBarCode/waybillBarCode",
+    "pages/order/paymentList/paymentList",
+    "pages/order/waybillLine/waybillLine",
+    "pages/order/waybillDetails/waybillDetails",
+    "pages/order/receivingDetails/receivingDetails",
+    "pages/order/serviceStation/serviceStation",
+
+    "pages/logs/logs",
+    "pages/chat-input/chat-input",
+    "pages/demo/amap/amap",
+    "pages/chat/chat",
+    "pages/hwu/hwu",
+    "pages/chengshi/chengshi",
+    "pages/ucenter/search-page/search-page"
+  ],
+  "tabBar": {
+    "selectedColor":"#6abceb",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"/sources/images/no_find.png",
+        "selectedIconPath":"sources/images/true2.png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "聊天",
+        "iconPath": "./sources/images/no_find.png",
+        "selectedIconPath": "sources/images/true2.png"
+      },
+      {
+        "pagePath": "pages/order/takeDelivery/takeDelivery",
+        "text": "收发记录",
+        "iconPath": "./sources/images/no_find.png",
+        "selectedIconPath": "sources/images/true2.png"
+      },
+      {
+        "pagePath": "pages/ucenter/ucenter/ucenter",
+        "text": "个人中心",
+        "iconPath": "sources/images/no_find.png",
+        "selectedIconPath": "sources/images/true2.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#6abceb",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"white"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}
+

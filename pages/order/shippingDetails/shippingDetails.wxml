@@ -1,0 +1,78 @@
+<!--pages/ucenter/shippingDetails/shippingDetails.wxml-->
+
+<view class='deliveryDetails'>
+  <view class='list'>
+    <view class='list_name'>
+      <text class='f_red'>*</text> <text decode="{{true}}">电&emsp;&emsp;话：</text>
+    </view>
+    <view class='list_input tel_input'>
+      <input type='number' bindinput='phoneBind' placeholder='请输入手机号或固话' placeholder-class='cccc'  maxlength='12' value='{{phone}}'/>
+    </view>
+    <text class='search_btn' bindtap='searchCustomer'>搜索</text>
+  </view>
+  
+  <view class='list'>
+    <view class='list_name'>
+      <text class='f_red'>*</text> <text decode="{{true}}">收&ensp;货&ensp;方：</text>
+    </view>
+    <view class='list_input'>
+      <input bindinput='companyBind' placeholder='请输入公司名称' placeholder-class='cccc' maxlength='16' value='{{company}}'/>
+    </view>
+  </view>
+  <view class='list'>
+    <view class='list_name'>
+      <text decode="{{true}}">联&ensp;系&ensp;人：</text>
+    </view>
+    <view class='list_input'>
+      <input bindinput='contactBind' placeholder='请输入联系人姓名' placeholder-class='cccc'  maxlength='6' value='{{contact}}'/>
+    </view>
+  </view>
+  
+  <view class='list'>
+    <view class='list_name'>
+      <text class='f_red'>*</text> <text>收货地址：</text>
+    </view>
+    <view class='list_input'>
+    
+      <view class='{{areaChoose}}' bindtap="selectDistrict">{{areaInfo}}</view>
+
+      <!-- <input   bindtap="selectDistrict" placeholder='选择所在省、市、区' placeholder-class='cccc'/> -->
+    </view>
+  </view>
+  <view class='list'>
+    <view class='list_name'></view>
+    <view class='list_input'>
+      <input bindinput='detailedBind' placeholder='请输入详细地址' placeholder-class='cccc' maxlength='50' value='{{detailed}}'/>
+    </view>
+  </view>
+
+  <view class='foot_btn'>
+    <button bindtap='deliverySubmit' class='b_green'>确认</button>
+  </view>
+</view>
+
+<view class="dialog-mask " style="z-index:11;visibility:{{addressMenuIsShow ? 'visible': 'hidden'}}" bindtap="hideCitySelected" />
+<!--城市三级联动-->
+<!--使用动画时不能wx:if="{{city.length>0&&isVisible}}" ，不能hidden=''属性否则无动画效果-->
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view style="height:10% ;width:95%;margin-top:10rpx">
+    <text catchtap="cityCancel">取消</text>
+    <text style="float: right" catchtap="citySure">确定</text>
+  </view>
+  <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+  <picker-view style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+      <view wx:for="{{provinces}}" class="picker-item" wx:key="{{item.id}}">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" class="picker-item" wx:key="{{item.id}}">
+        {{item.name}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{areas}}" class="picker-item" wx:key="{{item.id}}">
+        {{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+

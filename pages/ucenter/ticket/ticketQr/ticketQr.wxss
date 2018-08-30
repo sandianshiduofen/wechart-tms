@@ -1,0 +1,10 @@
+/* pages/ucenter/ticketQr/ticketQr.wxss */
+.ticketQr{
+  padding: 150rpx 155rpx;
+}
+.canvas{
+  height: 160px;
+  width: 160px;
+  display: block;
+  margin: 30rpx auto;
+}

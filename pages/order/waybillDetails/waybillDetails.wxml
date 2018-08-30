@@ -1,0 +1,84 @@
+<!--pages/order/waybillDetails/waybillDetails.wxml-->
+<view class='waybillDetails'>
+  <view class='state'>
+    物流状态： 
+    <block wx:if="{{content.status==0}}">
+      <text class="f_red">待揽货</text>
+      <image src='../../../sources/images/wuliu4.png'></image>
+    </block>
+    <block wx:if="{{content.status==1}}">
+      <text class="f_red">已揽货</text>
+      <image src='../../../sources/images/wuliu4.png'></image>
+    </block>
+    <block wx:if="{{content.status==2}}">
+      <text class="f_red">运输中</text>
+      <image src='../../../sources/images/wuliu1.png'></image>
+    </block>
+    <block wx:if="{{content.status==3}}">
+      <text class="f_red">配送中</text>
+      <image src='../../../sources/images/wuliu1.png'></image>
+    </block>
+    <block wx:if="{{content.status==4}}">
+      <text class="f_red">已取消</text>
+    </block>
+    <block wx:if="{{content.status==5}}">
+      <text class="f_red">已退货</text>
+    </block>
+    <block wx:if="{{content.status==6}}">
+      <text class="f_red">已签收</text>
+      <image src='../../../sources/images/wuliu2.png'></image>
+    </block>
+    <block wx:if="{{content.status==7}}">
+      <text class="f_red">已驳回</text>
+    </block>
+  </view>
+  <scroll-view class='waybill' scroll-y>
+    <view class='list' wx:for="{{logistics}}" wx:key="{{index}}">
+      <view class='text'>
+        {{item.contentForUser}}
+      </view>
+      <view class='time'>
+        {{item.logTime}}
+      </view>
+    </view>
+  </scroll-view>
+  <navigator class='dot_wraper' url='../serviceStation/serviceStation?id={{dot.id}}'>
+    <view class='dot'>
+      <view class='dot_company'>揽货网点：{{dot.name}} <image catchtap='callPhone' data-tel="{{dot.tel1}}" src='../../../sources/images/tel.png'></image></view>
+      <view class='dot_address'>网点地址：{{dot.province}}{{dot.city}}{{dot.area}}{{dot.address}}</view>
+    </view>
+    <view class='goto'><image src='../../../sources/images/icon_go.png'></image></view>
+  </navigator>
+  <navigator class='dot_wraper' url='../paymentList/paymentList?no={{waybillNo}}'>
+    <view class='dot'>
+      <view class='dot_company'>查看代收货款修改信息</view>
+    </view>
+    <view class='goto'><image src='../../../sources/images/icon_go.png'></image></view>
+  </navigator>
+
+  <view class='content'>
+    <view>下单时间：{{content.creatTime}}</view>
+    <view>
+      运单编号：{{content.no}}
+      <navigator url='../waybillLine/waybillLine?no={{content.no}}'>运单条码</navigator>
+    </view>
+    <view>收件方：{{content.receiverName}}</view>
+    <view>
+      <text>联 系 人：{{content.receiverLinkman?content.receiverLinkman:"无"}}</text>
+      <text>电 话：{{content.receiverMobile}}</text>
+    </view>
+    <view>收货地址：{{content.receiverProvinceName}}{{content.receiverCityName}}{{content.receiverAreaName}}{{content.receiverAddress}}</view>
+    <view>
+      <text>物流运费：{{content.freightAmount}}</text>
+      <text>代收货款：{{content.goodsAmount}}元</text>
+    </view>
+    <view>
+      <text>代收货款手续费：{{content.poundageAmount}}元</text>
+      <text>货物件数：{{content.goodsQuantity}}</text>
+    </view>
+    <view wx:if="{{content.payType==1}}">支付方式：寄方付</view>
+    <view wx:elif="{{content.payType==2}}">支付方式：收方付</view>
+    <view wx:else>支付方式：无</view>
+    <view>货物信息：{{content.goodsName}}</view>
+  </view>
+</view>

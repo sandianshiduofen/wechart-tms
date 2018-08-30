@@ -1,0 +1,10 @@
+<!--pages/ucenter/myqr/myqr.wxml-->
+<view class='myqr'>
+  <view class='myqr_company'>公司名称：{{company}}</view>
+  <view class='myqr_tel'>注册手机号：{{userName}}</view>
+  <view class='myqr_qr'><canvas class='canvas' canvas-id='canvas' bindlongtap='save'></canvas></view>
+  <!-- <view class='myqr_qr'><image bindtap="previewImg" mode="scaleToFill" src="{{imagePath}}"></image></view> -->
+  <view class='myqr_text'>扫描二维码，可以将我添加到线路中</view>
+
+</view>
+

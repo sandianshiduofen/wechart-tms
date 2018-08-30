@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+  <!-- <view class='banner'>
+    <navigator>
+      <image src='../../sources/images/wxbanner.jpg'></image>
+    </navigator>
+  </view>
+   -->
+
+  <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+    <block>
+      <swiper-item>
+        <image src="../../sources/images/banner.jpg" class="slide-image" width="750" height="600"/>
+      </swiper-item>
+    </block>
+    <block>
+      <swiper-item>
+        <image src="../../sources/images/banner2.jpg" class="slide-image" width="750" height="600"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='indexNav'>
+    <view class="usermotto">
+      <navigator url='../order/selfHelp/selfHelp'>
+        <image src='../../sources/images/ucenter1.png'></image>
+        <view>自助下单</view>
+      </navigator>
+      <navigator open-type="switchTab" url='../ucenter/ucenter/ucenter'>
+        <image src='../../sources/images/ucenter1.png'></image>
+        <view>个人中心</view>
+      </navigator>
+    </view>
+  </view>
+</view>

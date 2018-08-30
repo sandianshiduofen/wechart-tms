@@ -1,0 +1,87 @@
+
+<view class='container'>
+  <!-- 查询结果 -->
+  <view>
+    <view class='hr-10'></view>
+    <!-- 头部查询条件 -->
+    <view class='show-{{searchListShow?"false":"true"}}'>
+      <view class='menu border-b'>
+        <view>综合</view>
+        <view>销量</view>
+        <view>新品</view>
+        <view>价格
+          <image class='menu-price show-{{ascendingOrder?"false":"true"}}' src='../../image/search/paixu_xia@3x.png'></image>
+          <image class='menu-price show-{{ascendingOrder?"true":"false"}}' src='../../image/search/paixu_shang@3x.png'></image>
+        </view>
+        <view catchtap='filter'>筛选
+          <image class='menu-screen' src='../../image/search/shaixuan@3x.png'></image>
+        </view>
+      </view>
+      <!-- 商品列表 -->
+    </view>
+
+
+  </view>
+  <!-- 筛选页面 -->
+  <view class='animation' animation="{{animationData}}" style="height:100%;position:fixed;visibility:{{show ? 'visible':'hidden'}}">
+    <view class='animation-content' catchtap='nofilter'>
+      <view>
+        <view class='color-35 margin-b-30'>
+          中大门服务
+        </view>
+        <view class='flex-row classify'>
+          <view catchtap='goddsAttrTop' class='classify-btn {{goddsAttr?"active":""}} '>
+            自营商品
+          </view>
+          <view catchtap='goddsAttrTop' class='classify-btn  {{goddsAttr?"":"active"}}'>
+            非自营商品
+          </view>
+        </view>
+      </view>
+
+      <view class='price' wx:for="{{}}">
+        <view class='color-35 margin-b-30'>
+          价格
+        </view>
+        <view class='flex-row classify'>
+          <view class='classify-btn classify-input'>
+            <input placeholder='最低价格' />
+          </view>
+          <view class='line'></view>
+          <view class='classify-btn classify-input'>
+            <input placeholder='最高价格' />
+          </view>
+        </view>
+      </view>
+
+      <view wx:for="{{filtrateList}}" wx:key="{{index}}">
+        <view class='color-35 margin-b-30'>
+          {{item.name}}
+        </view>
+        <view class='flex-row classify'>
+          <view>
+            <block wx:for="{{item.value}}" wx:for-item="item" wx:key="{{index}}">
+              <view bindtap="clickedClassify" data-id="{{index}}" data-name="{{item.attr_value_name}}" class='classify-btn {{index == current_tag?"active":""}}'>
+                <text>{{item.attr_value_name}}</text>
+              </view>
+            </block>
+          </view>
+        </view>
+
+
+
+      </view>
+      <!-- 底部按钮 -->
+      <view class="flex-row buttom-btn">
+        <button class='default' type='default' catchtap='canelTop'>重置</button>
+        <button catchtap='confirmTop' class='default' type='warn'>确定</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 搜索列表 -->
+  <view class='flex-col search-list show-{{searchListShow?"true":"false"}}'>
+    <text class='border-b' catchtap='searchGoodsTop' data-keywords="口红小样"><text class='color-c8' >口红</text>小样</text>
+    <text class='border-b' catchtap='searchGoodsTop' data-keywords="面膜"><text class='color-c8'></text>面膜</text>
+  </view>
+</view>

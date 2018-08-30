@@ -1,0 +1,42 @@
+/* pages/ucenter/shippingDetails/shippingDetails.wxss */
+
+@import "../../chengshi/chengshi.wxss";
+.list{
+  padding: 10rpx;
+  display: flex;
+  margin: 0 20rpx;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+.list_name{
+  text-align: right;
+  width: 180rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.list_input input{
+  height: 80rpx;
+  width: 500rpx;
+}
+.list_input view{
+  height: 80rpx;
+  width: 500rpx;
+  line-height: 80rpx;
+}
+.foot_btn{
+  margin-top: 150rpx;
+}
+
+.tel_input input{
+  width: 400rpx;
+}
+
+.search_btn{
+  border-radius: 10rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100rpx;
+  text-align: center;
+  background: #6abceb;
+  color: #fff;
+}

@@ -1,0 +1,29 @@
+<!--pages/ucenter/contactEdit/contactEdit.wxml-->
+<view>
+  <view class='explain'>
+    <text>1、完善电话，有助于您查看收货记录
+      2、可填写多个收货人电话
+      3、发货时，请提醒商户使用您填写过的联系电话
+    </text>
+  </view>
+  <view>
+    <view class='tel_list'>
+      <text class='title'>手机号码</text>
+      <view class='input_text'>
+        <input type='number' bindinput='watchPhone' value='{{phone}}' placeholder='请输入11位手机号' placeholder-class='cccc' maxlength='11'/>
+      </view>
+    </view>
+    <view class='tel_list'>
+      <text class='title'>验证码</text>
+      <view class='input_text'>
+        <input bindinput='watchCode' placeholder='请输入验证码' placeholder-class='cccc' maxlength='6'/>
+      </view>
+      <text bindtap='getcode' class='f_blue'>{{codeText}}</text>
+    </view>
+  </view>
+
+  <!-- 底部按钮 -->
+  <view class='foot_btn'>
+      <button bindtap='phoneSubmit' class='b_green'>保存电话</button>
+  </view>
+</view>

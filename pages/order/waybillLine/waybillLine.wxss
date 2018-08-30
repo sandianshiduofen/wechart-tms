@@ -1,0 +1,28 @@
+/* pages/order/waybillLine/waybillLine.wxss */
+page{
+  background: #fff;
+}
+
+.waybillLine{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.way{
+  transform:rotate(90deg);
+  -ms-transform:rotate(90deg); /* Internet Explorer */
+  -moz-transform:rotate(90deg); /* Firefox */
+  -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+  -o-transform:rotate(90deg); /* Opera */
+}
+.way view{
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 32rpx;
+}
+
+canvas{
+  width: 900rpx;
+  height: 290rpx;
+}

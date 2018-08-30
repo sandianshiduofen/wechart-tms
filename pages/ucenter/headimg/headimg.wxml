@@ -1,0 +1,10 @@
+<!--pages/ucenter/headimg/headimg.wxml-->
+<view class='headimg'>
+  <form bindsubmit="formSubmit">
+    <view class='imgShow'>
+      <image src="{{srcImg?srcImg:'../../../sources/images/head.jpg'}}" class="avatar" bindtap="upload"></image>
+    </view>
+    <view>{{cuowu}}</view>
+  </form>
+</view>
+<!-- tms/img/dealer/head/2018/06/04/20180604114646315srTduS.jpg -->

@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="ucenter">
+  <view class='info_top'>
+    <navigator class='headimg' url="../headimg/headimg"><image src='{{headUrl}}'></image></navigator>
+    <view class='info_text'>
+      <text class='info_company'>{{company}}</text>
+      <text class='info_username'>{{userName}}</text>
+    </view>
+    <navigator class='qr'  url="../myqr/myqr"><image src='../../../sources/images/ucenter10.png'></image></navigator>
+  </view>
+
+  <view class="weui-cells weui-cells_after-title">
+    <view wx:for="{{infoList}}" wx:key="{{item.listName}}">
+      <navigator wx:if="{{item.navUel}}" url="{{item.navUel}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image class="weui-cell-image" src="{{item.iconUrl}}"></image>
+        </view>
+        <view class="weui-cell__bd">{{item.listName}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">{{item.explain}}</view>
+      </navigator>
+
+      <view wx:else bindtap='{{item.clickEvent}}' class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image class="weui-cell-image" src="{{item.iconUrl}}"></image>
+        </view>
+        <view class="weui-cell__bd">{{item.listName}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">{{item.explain}}</view>
+      </view>
+    </view>
+  </view>
+</view>

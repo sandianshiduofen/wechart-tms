@@ -1,0 +1,56 @@
+<!--pages/order/waybillBarCode/waybillBarCode.wxml-->
+<view class='waybillBarCode'>
+  <navigator class='barCode' url='../waybillLine/waybillLine?no={{waybillNo}}'>
+    <canvas class='canvas1' canvas-id="barcode"/>
+    <view>{{waybillNo}}</view>
+  </navigator>
+  <view class='goods_amount'>货物件数：{{content.goodsQuantity}}</view>
+  <view class='btn_wraper'>
+    <navigator class='order_btn' url='../waybillBarshare/waybillBarshare?no={{content.no}}'>
+      <image src='../../../sources/images/weixin.png'></image>
+      <view>运单分享</view>
+    </navigator>
+    <view class='order_btn' bindtap='waybillInfo'>
+      <image src='../../../sources/images/fenxiang.png'></image>
+      <view>运单信息</view>
+    </view>
+  </view>
+  <view class='waybill_info' wx:if="{{copyShow}}" bindtap='waybillInfoHidden'>
+    <view class='waybill_bg'>
+      <view class='content'>
+        <view>下单时间：{{content.creatTime}}</view>
+        <view>
+          运单编号：{{content.no}}
+        </view>
+        <view>收件方：{{content.receiverName}}</view>
+        <view>
+          <text>联 系 人：{{content.receiverLinkman}}</text>
+          <text>电 话：{{content.receiverMobile}}</text>
+        </view>
+        <view>收货地址：{{content.receiverProvinceName}}{{content.receiverCityName}}{{content.receiverAreaName}}{{content.receiverAddress}}</view>
+        <view>
+          <text>物流运费：{{content.freightAmount}}</text>
+          <text>代收货款：{{content.goodsAmount}}元</text>
+        </view>
+        <view>
+          <text>代收货款手续费：{{content.poundageAmount}}元</text>
+          <text>货物件数：{{content.goodsQuantity}}</text>
+        </view>
+        <view wx:if="{{content.payType==1}}">支付方式：寄方付</view>
+        <view wx:elif="{{content.payType==2}}">支付方式：收方付</view>
+        <view wx:else>支付方式：无</view>
+        <view>货物信息：{{content.goodsName}}</view>
+        <button catchtap='copyInfo' data-info='下单时间：{{content.creatTime}};运单编号：{{content.no}};收件方：{{content.receiverName}};联 系 人：{{content.receiverLinkman}};电 话：{{content.receiverMobile}};收货地址：{{content.receiverProvinceName}}{{content.receiverCityName}}{{content.receiverAreaName}}{{content.receiverAddress}};物流运费：{{content.freightAmount}};代收货款：{{content.goodsAmount}}元;代收货款手续费：{{content.poundageAmount}}元;货物件数：{{content.goodsQuantity}};货物信息：{{content.goodsName}};'>复制</button>
+      </view>
+    </view>
+  </view>
+  <view class='serviceStation'>
+    <view>揽货网点：{{dot.name}}</view>
+    <view>联系电话：
+      <text wx:if="{{dot.tel1}}" class='f_blue' bindtap='callPhone' data-tel="{{dot.tel1}}">{{dot.tel1}} </text>
+      <text wx:if="{{dot.tel2}}" class='f_blue' bindtap='callPhone' data-tel="{{dot.tel2}}"> {{dot.tel2}} </text>
+      <text wx:if="{{dot.tel3}}" class='f_blue' bindtap='callPhone' data-tel="{{dot.tel3}}"> {{dot.tel3}} </text>
+    </view>
+    <view>网点地址：{{dot.province}}{{dot.city}}{{dot.area}}{{dot.address}}</view>
+  </view>
+</view>

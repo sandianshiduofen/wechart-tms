@@ -1,0 +1,107 @@
+/* pages/ucenter/account/billing/filtrate/filtrate.wxss */
+
+.filtrate_bg{
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.filtrate_con{
+  background: #fff;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 10%;
+  z-index: 11;
+}
+
+.filtrate_c{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #ddd;
+}
+.goback{
+  display: flex;
+  align-items: center;
+}
+.goback view{
+  display: flex;
+  align-items: center;
+}
+.filtrate_img{
+  width:25rpx;
+  height: 45rpx;
+  margin: 0 30rpx;
+}
+
+checkbox-group{
+  overflow: hidden;
+}
+
+.checkbox checkbox{
+  position: absolute;
+  visibility: hidden;  
+}
+.checkbox checkbox + text{
+  float: left;
+  border: 1px solid #ddd;
+  width: 170rpx;
+  margin:0 20rpx 20rpx 30rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.checkbox.checked checkbox + text{
+  border-color: #52bb03;
+  color: #52bb03
+}
+
+.filtrate_title{
+  padding: 0 30rpx;
+  font-weight: bold;
+}
+.time{
+  display: flex;
+  align-items: center;
+}
+.picker_w{
+  border: 1px solid #ddd;
+  background: #fff;
+  text-align: center;
+  width: 260rpx;
+  display: inline-block;
+  margin: 0 30rpx;
+}
+.picker{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.filtrate_btn{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+.filtrate_btn button{
+  width: 100%;
+  border-radius: 0;
+  border: 2px solid #6abceb;
+  color: #6abceb;
+  background: #fff;
+}
+.filtrate_btn button.submit{
+  background: #6abceb;
+  color: #fff;
+}
+.no_data{
+  text-align: center;
+  padding: 20rpx 0;
+  color: #999;
+}

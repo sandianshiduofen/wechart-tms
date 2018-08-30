@@ -1,0 +1,43 @@
+<!--pages/ucenter/account/account.wxml-->
+<view class='account'>
+  <view class='account_t'>
+    <view class='withdraw'>
+      可提现金额 <text class='f_red'> ￥{{extractAmount}} </text>
+      <image bindtap='explainBtn' src='../../../sources/images/wen.png'></image>
+    </view>
+    <view class='other_money'>
+      <text>￥{{guardAmount}}
+        保护期金额</text>
+      <text>￥{{sumAmount}}
+        保护期金额</text>
+    </view>
+    <button bindtap='withdrawDeposit' class='b_green'>提现</button>
+  </view>
+  <view class='account_b'>
+    <navigator class='account_list' url='./billing/billing'>
+      <view class='title_explain'>
+        <view class='account_tit'>账户明细</view>
+      </view>
+      <view class='state f_green'></view>
+      <view class='go_to'> <image src='../../../sources/images/icon_go.png'></image></view>
+    </navigator>
+    <navigator class='account_list' url='{{bankNoUrl}}'>
+      <view class='title_explain'>
+        <view class='account_tit'>我的银行卡</view>
+        <view class='explain c999'>取出的金额会打到绑定的银行卡上</view>
+      </view>
+      <view wx:if="{{bankNo}}" class='state f_green'>已绑定</view>
+      <view wx:else class='state f_red'>未绑定</view>
+      <view class='go_to'> <image src='../../../sources/images/icon_go.png'></image></view>
+    </navigator>
+    <navigator wx:if="{{password}}" class='account_list' url='./passwordList/passwordList'>
+      <view class='title_explain'>
+        <view class='account_tit'>安全密码</view>
+        <view class='explain c999'>用于提现转账安全验证</view>
+      </view>
+      <view class='state f_green'>已设置</view>
+      <view class='go_to'> <image src='../../../sources/images/icon_go.png'></image></view>
+    </navigator>
+  </view>
+</view>
+

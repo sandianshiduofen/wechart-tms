@@ -1,0 +1,29 @@
+
+<template name="filtrate-list">
+  <view class='list' wx:for="{{list}}" wx:key="{{item.createTime}}">
+    <view class='time'>
+      <view>{{item.showDate}}</view>
+      <view>{{item.showTime}}</view>
+    </view>
+
+    <view class='content' wx:if='{{item.fromlogType==0}}'>
+      <view>提现单号: <text class='c333'>{{item.sourceNo}}</text></view>
+      <view>{{item.incomeTypeName}}</view>
+      <view wx:if='{{item.status!=4}}'>到账金额：￥{{item.amount}}</view>
+    </view>
+    
+    <view class='content' wx:if='{{item.fromlogType==1}}'>
+      <view>运单号：<text class='c333'>{{item.sourceNo}}</text></view>
+      <view>{{item.incomeTypeName}}--{{item.sourceName}}</view>
+      <view>应收：￥{{item.receivableAmountName}}</view>
+    </view>
+    
+    <view class='content' wx:if='{{item.fromlogType==2}}'>
+      <view>订单号：<text class='c333'>{{item.sourceNo}}</text></view>
+      <view>{{item.incomeTypeName}}--{{item.sourceName}}</view>
+      <view>到账金额：￥{{item.amount}}</view>
+    </view>
+
+    <view class='price'>{{item.amountName}}</view>
+  </view>
+</template>

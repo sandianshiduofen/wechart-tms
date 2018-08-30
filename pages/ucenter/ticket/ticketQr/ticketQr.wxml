@@ -1,0 +1,12 @@
+<!--pages/ucenter/ticketQr/ticketQr.wxml-->
+<view class='ticketQr'>
+  <view class='c999'>运费抵扣券金额：<text class="f_red">{{amount}}</text> 元</view>
+  <canvas class='canvas' canvas-id='canvas' bindlongtap='save'></canvas>
+  <!-- <image src='{{imagePath}}'></image> -->
+  <view class='c999'>
+    此二维码有效期为20秒，<text class='f_blue'>{{countDown}}</text> 秒后会对此券号重新生成二维码
+  </view>
+
+    
+
+</view>

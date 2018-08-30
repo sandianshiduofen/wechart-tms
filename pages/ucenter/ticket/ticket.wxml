@@ -1,0 +1,34 @@
+<!--pages/ucenter/ticket/ticket.wxml-->
+
+<import src="../../../modules/noData/noData.wxml"/>
+
+<view class='ticket'>
+  <view class='useRules'>
+    <navigator url='./useRules/useRules'>使用规则</navigator>
+  </view>
+  <view wx:if="{{list.length>0}}" class='list'>
+    <view class='li' wx:for="{{list}}" wx:key="{{item.id}}" bindtap='showQr' data-tickedid='{{item.id}}' data-amount='{{item.amount}}'>
+      <image src='../../../sources/images/coupon.jpg'></image>
+      <view class='li_text'>
+        <view class='li_left'>{{item.amount}}</view>
+        <view class='li_right'>
+          <view class='title'>{{item.couponName}}</view>
+          <view class='tiem'><text class="f_red">有效期：</text>{{item.startTimeShow}}~{{item.endTimeShow}}</view>
+          <view class='city_num'>
+            <view class='city'>使用区域：{{item.useableAddr}}</view>
+            <view class='number'>{{item.leftNum}}张</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <template is="no-data" data="{{noText}}"/>
+  </view>
+  <view class='bottom'>
+    <view class='bottom_f'>
+      <view>本活动最终解释权归北京三真车联信息技术有限公司所有</view>
+      <view>如有疑问，请拨打客服电话：400-1821-200</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+/* pages/order/paymentList/paymentList.wxss */
+.paymentList{
+  padding: 80rpx 60rpx;
+}
+.title{
+  padding-bottom: 60rpx;
+}
+
+.list view{
+  border-bottom: 1px dashed #ddd;
+  line-height: 80rpx;
+  color: #666;
+}

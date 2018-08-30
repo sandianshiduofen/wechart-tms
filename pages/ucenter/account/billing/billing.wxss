@@ -1,0 +1,142 @@
+/* pages/ucenter/account/billing/billing.wxss */
+.time_t{
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 10rpx 30rpx 0;
+}
+.time_t_t{
+  width: 80%;
+  }
+.fil{
+  width: 20%;
+  text-align: right;
+}
+.billing_t{
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.billing_price{
+  width: 50%;
+  font-size: 26rpx;
+}
+
+.list{
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eee;
+}
+.list view,.list view view{
+  color: #999;
+  font-size: 28rpx;
+}
+.time{
+  width: 150rpx;
+  text-align: center;
+}
+.content{
+  width: 450rpx;
+}
+.price{
+  width: 150rpx;
+}
+.filtrate_bg{
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.filtrate_con{
+  background: #fff;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 10%;
+  z-index: 11;
+}
+
+.filtrate_c{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #ddd;
+}
+.goback{
+  display: flex;
+  align-items: center;
+}
+.goback view{
+  display: flex;
+  align-items: center;
+}
+.filtrate_img{
+  width:25rpx;
+  height: 45rpx;
+  margin: 0 30rpx;
+}
+
+checkbox-group{
+  overflow: hidden;
+}
+
+.checkbox checkbox{
+  position: absolute;
+  visibility: hidden;  
+}
+.checkbox checkbox + text{
+  float: left;
+  border: 1px solid #ddd;
+  width: 170rpx;
+  margin:0 20rpx 20rpx 30rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.checkbox.checked checkbox + text{
+  border-color: #52bb03;
+  color: #52bb03
+}
+
+.filtrate_title{
+  padding: 0 30rpx;
+  font-weight: bold;
+}
+.picker{
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  text-align: center;
+}
+
+.filtrate_btn{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+.filtrate_btn button{
+  width: 100%;
+  border-radius: 0;
+  border: 2px solid #52bb03;
+  color: #52bb03;
+  background: #fff;
+}
+.filtrate_btn button.submit{
+  background: #52bb03;
+  color: #fff;
+}
+.no_data{
+  text-align: center;
+  padding: 20rpx 0;
+  color: #999;
+}

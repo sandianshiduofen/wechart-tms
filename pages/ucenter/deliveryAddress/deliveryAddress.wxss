@@ -1,0 +1,83 @@
+/* pages/ucenter/deliveryAddress/deliveryAddress.wxss */
+page{
+  background: #f5f5f5;
+}
+.search{
+  height: 72rpx;
+  padding: 20rpx 40rpx;
+  display: flex;
+  background: #fff;
+  overflow: hidden;
+}
+.search input{
+  height: 50rpx;
+  border: 6rpx solid #52BB03;
+  padding: 5rpx;
+  width: 650rpx;
+}
+.search image{
+  height: 50rpx;
+  width: 55rpx;
+  margin: 10rpx 15rpx;
+}
+
+.list{
+  background: #fff;
+  margin-top: 15rpx;
+  line-height: 70rpx;
+  padding: 10rpx 30rpx;
+}
+.list_t,list_c{
+  display: flex;
+}
+.company{
+  width: 550rpx;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+.default{
+  font-size: 30rpx;
+  text-align: right;
+}
+.list_c{
+  display: flex;
+}
+.name{
+  width: 365rpx;
+}
+.address{
+  border-bottom: 1rpx solid #ddd;
+}
+.list_b{
+  padding: 15rpx 0;
+  display: flex;
+  line-height: 55rpx;
+}
+.edit_moren{
+  width: 300rpx;
+  height: 55rpx;
+}
+
+.edit{
+  text-align: right;
+  width: 200rpx;
+}
+.del{
+  width: 200rpx;
+  text-align: right;
+}
+
+.list_b image{
+  height: 46rpx;
+  width: 46rpx;
+  display: inline-block;
+  margin:0 15rpx -12rpx;
+}
+.radio{
+  height: 40rpx;
+  width: 40rpx;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: -10rpx;
+}

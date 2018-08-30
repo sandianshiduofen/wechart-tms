@@ -1,0 +1,44 @@
+/**ucenter.wxss**/
+page{
+  background-color: #efeff4;
+}
+.info_top{
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+.headimg{
+  height: 130rpx;
+  width: 130rpx;
+  padding:35rpx;
+}
+.headimg image{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+.info_text{
+  padding-top: 50rpx;
+  line-height: 56rpx;
+  width: 420rpx;
+}
+.info_text text{
+  display: block;
+}
+.info_company{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.info_username{
+  font-size: 32rpx;
+  color: #666;
+}
+.qr{
+  padding-top: 85rpx;
+}
+.qr image{
+  width: 70rpx;
+  height: 70rpx;
+}

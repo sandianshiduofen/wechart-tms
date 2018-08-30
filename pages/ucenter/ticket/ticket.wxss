@@ -1,0 +1,82 @@
+/* pages/ucenter/ticket/ticket.wxss */
+.list{
+  padding: 30rpx;
+}
+.li{
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 5rpx;
+  position: relative;
+  line-height: 60rpx;
+}
+.li image{
+  height: 230rpx;
+  width: 690rpx;
+  display: block;
+}
+
+.li_text{
+  display: flex;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.li_left{
+  width: 190rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 90rpx;
+}
+
+.li_right{
+  width: 480rpx;
+  margin-left: 20rpx;
+}
+
+.li_right view{
+  color: #666;
+  font-size: 30rpx;
+}
+.title{
+  padding-bottom: 50rpx;
+}
+.city_num{
+  display: flex;
+  border-top: 1px dashed #ccc;
+}
+.city{
+  width:400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bottom{
+  height: 100rpx;
+}
+.bottom_f{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10rpx 30rpx;
+  background: #fff;
+}
+.bottom_f view{
+  color: #999;
+  font-size: 26rpx;
+}
+
+.useRules{
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10rpx;
+  padding: 10rpx 30rpx;
+
+}
+.useRules navigator{
+  float: right;
+}

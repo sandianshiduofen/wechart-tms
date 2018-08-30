@@ -1,0 +1,26 @@
+<!--pages/ucenter/account/billing/filtrate/filtrate.wxml-->
+<template name="filtrate-c">
+    <view  class="filtrate_c" >
+      <view class='goback'>
+        <view bindtap='closeFiltrate'><image class='filtrate_img' src='../../../../sources/images/icon_goback.png'/> 关闭</view>
+      </view>
+      <view class='filtrate_class'>
+        <view class='filtrate_title'>类别筛选</view>
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox {{item.checked?'checked':''}}" wx:for="{{filtrate}}" wx:key="{{item.id}}">
+            <checkbox value="{{item.id}}" checked="{{item.checked}}"/><text>{{item.value}}</text>
+          </label>
+        </checkbox-group>
+        <view class='filtrate_title'>时间筛选</view>
+        <picker class='picker' mode="date" value="{{filtrateDate.date}}" fields="month" bindchange="bindDateChange" end="{{filtrateDate.endDate}}">
+          <view class="picker">
+            {{filtrateDate.date}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='filtrate_btn'>
+      <button class='' bindtap='billFiltReset'>重置</button>
+      <button class='submit' bindtap='accountDetailSearch'>确认</button>
+    </view>
+</template>

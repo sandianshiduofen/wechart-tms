@@ -1,0 +1,17 @@
+<!--pages/ucenter/account/telCode/telCode.wxml-->
+<view class='telCode'>
+  <view class='telCode_t b_green'>为了保障账户安全，请您进行身份验证，我们将发送手机短信验证码至{{hideTel}}</view>
+  <view class='code'>
+    <input type='number' bindinput='watchCode' maxlength='6' placeholder='请输入手机短信验证码'/>
+    <button bindtap='gainCode'>{{codeText}}</button>
+  </view>
+  <view class='explain'>
+    <view>没有收到短息验证码？</view>
+    <view>1.网络通讯异常可能会造成短信丢失，请稍后重新获取尝试</view>
+    <view>2.请核实手机是否已欠费停机，或者屏蔽了系统短信</view>
+    <view>客服电话： <text>400-182-1200</text></view>
+  </view>
+  <view class='foot_button'>
+    <button bindtap='nextStep' class='b_green'>下一步</button>
+  </view>
+</view>

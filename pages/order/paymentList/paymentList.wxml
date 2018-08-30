@@ -1,0 +1,11 @@
+<!--pages/order/paymentList/paymentList.wxml-->
+<view class='paymentList'>
+  <view class='title'>查看代收货款修改信息</view>
+  <view class='list' wx:if="{{list.length>0}}">
+    <view wx:for="{{list}}" wx:key="{{index}}">{{item.CTime}} 用户修改代收款为<text class='f_red'>{{item.newGoodsAmount}}</text>元</view>
+  </view>
+  
+  <view class='list' wx:else>
+    <view>没有修改代收货款</view>
+  </view>
+</view>

@@ -1,0 +1,103 @@
+/**app.wxss**/
+
+@import "./sources/style/common.wxss";
+view{
+  font-size: 28rpx;color: #222;
+}
+page{
+  -webkit-user-select:none;
+  user-select:none;
+  width:100%;
+  height:100%;
+  background-color:#f8f8f8;
+  font-family:Arial, Helvetica, sans-serif;
+  overflow-x:hidden;
+}
+.f_red{
+  color: #f00;
+}
+
+.f_green{
+  /* color: #52bb03; */
+  color: #6abceb
+}
+
+.f_blue{
+  color: #4a90e2;
+}
+
+.b_red{
+  background: #f00;
+}
+
+.b_green{
+  /* background: #52bb03; */
+  background: #6abceb;
+}
+
+.c333{
+  color: #333;
+}
+.c666{
+  color: #666;
+}
+.c999{
+  color: #999;
+}
+
+.cccc{
+  color: #ccc;
+}
+
+.cfff{
+  color: #fff;
+}
+
+.bccc{
+  background: #ccc;
+}
+/* 底部按钮 */
+.foot_wraper{
+  height: 120rpx;
+}
+.foot_button{
+  height: 120rpx;
+}
+.foot_button button{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: #fff;
+  border-radius: 0;
+}
+.foot_btn{
+  padding: 0 50rpx;
+}
+.foot_btn button{
+  color: #fff;
+}
+
+/* 生成二维码画布隐藏 */
+.canvas-box{
+  visibility: hidden;
+  position: absolute;
+}
+
+/* 没有数据 */
+.no_find_data{
+  padding: 200rpx 200rpx 0;
+}
+
+.no_find_data image{
+  width: 250rpx;
+  height: 250rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.no_find_data view{
+  text-align: center;
+  padding-top: 25rpx;
+  color: #666;
+}

@@ -1,0 +1,10 @@
+<!--pages/ucenter/ticket/useRules/useRules.wxml-->
+<view class='useRules'>
+  <view>1.请在有效期内使用此券，过期失效。</view>
+  <view>2.单笔运单仅限使用一张运费抵扣券。</view>
+  <view>3.此券仅限券面指定城市范围使用，请慎重选择。</view>
+  <view>4.此券抵扣金额大于实际运费时，不找零不退还。</view>
+  <view>5.此券一经发放、 领取，即与您的平台账号绑定，不可赠与、转售。</view>
+  <view>6.此券仅限支付运费时使用，扫码验证通过后即表示已使用，取消支付不退回。</view>
+  <view>7.详询此券使用规则，请致电：400 1821 200</view>
+</view>

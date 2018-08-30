@@ -1,0 +1,56 @@
+<!--pages/order/receivingRecord/receivingRecord.wxml-->
+
+<import src="../../../modules/order-filtrate/order-filtrate.wxml"/>
+<import src="../../../modules/noData/noData.wxml"/>
+
+<view class='takeDelivery'>
+  <view class='nav'>
+    <view bindtap='goTakeDelivery' class='nav_list'>发货记录</view>
+    <view class='nav_list current'>收货记录</view>
+  </view>
+  <view class='filtrates'>
+    <scroll-view class="scroll-view_H" scroll-x style="width:74%">
+      <text wx:if="{{filtrateDate.filtrateStart && filtrateDate.filtrateEnd}}">{{filtrateDate.filtrateStart}}~{{filtrateDate.filtrateEnd}}</text><text wx:for="{{filtrateTextTrue}}" wx:key="{{index}}">{{item.text}}</text>
+    </scroll-view>
+    <view class='filtrates_btn b_green' bindtap='openFiltrate' data-seatch_id="{{name}}" data-seatch_name="{{name}}" ><image src='../../../sources/images/search2.png'></image>筛选</view>
+  </view>
+
+  <view wx:if="{{!noText}}" class='order_list'>
+    <view class='list' wx:for="{{list}}" wx:key="{{index}}">
+      <view class='dot_state'>
+        <text class='dot'> <text class='c999'> 揽货网点：</text>{{item.inputDotName}}</text>
+        <text class='state f_red' wx:if="{{item.status==0}}">待揽货</text>
+        <text class='state f_red' wx:elif="{{item.status==1}}">已揽货</text>
+        <text class='state f_red' wx:elif="{{item.status==2}}">运输中</text>
+        <text class='state f_red' wx:elif="{{item.status==3}}">配送中</text>
+        <text class='state f_red' wx:elif="{{item.status==4}}">取消发货</text>
+        <text class='state f_red' wx:elif="{{item.status==5}}">已退货</text>
+        <text class='state f_red' wx:elif="{{item.status==6}}">已签收</text>
+        <text class='state f_red' wx:elif="{{item.status==7}}">已驳回</text>
+      </view>
+      <view class='number_num'>
+        <text class='order_num'><text class='c999'>运单编号：</text>{{item.no}}</text>
+        <text class='goods_num'><text class='c999'>货物件数：</text>{{item.goodsQuantity}}</text>
+      </view>
+      <view class='company_tel'>
+        <text class='company'><text class='c999'>发货方：</text>{{item.senderName}}</text>
+        <image catchtap='callPhone' data-tel='{{item.receiverMobile}}'  src='../../../sources/images/tel.png'></image>
+      </view>
+      <view class='order_btm'>
+        <navigator url='../receivingDetails/receivingDetails?no={{item.no}}'>运单详情</navigator>
+      </view>
+    </view>
+    <view class='more' wx:if="{{arriveEndText}}">{{arriveEndText}}</view>
+  </view>
+
+  <view wx:else class='order_list'>
+    <template is="no-data" data="{{noText}}"/>
+  </view>
+  
+  <view wx:if="{{filtrateShow}}" class='filtrate'>
+    <view class='filtrate_bg'></view>
+    <view class='filtrate_con'>
+      <template is="filtrate-c" data="{{filtrate,filtrateDate}}"/>
+    </view>
+  </view>
+</view>

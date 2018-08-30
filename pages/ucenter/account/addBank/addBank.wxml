@@ -1,0 +1,39 @@
+<!--pages/ucenter/account/addBank/addBank.wxml-->
+<view class='addBank'>
+  <view class='explain'>
+    <text class='f_red'>●</text> 为避免打款失败，建议绑定:
+  </view>
+  
+  <view class='explain_b'>
+    工商、建设、招商、农行、中国、交通、等大型商业银行
+  </view>
+  <view class='explain_b'>
+    暂不支持：地方商业银行、信用卡
+  </view>
+  <view class='holder'>
+    <text>开户人:</text>
+    <input type='text' bindinput='bankNameInput' placeholder='请输入开户人姓名' placeholder-class="pColor"/>
+  </view>
+  <view class='holder'>
+    <text>卡 号:</text>
+    <input type='text' bindinput='bankNoInput' maxlength="19" placeholder='请输入银行卡号' placeholder-class="pColor"/>
+  </view>
+  
+  <view class='bankType' wx:if="{{bankType}}">
+    银行卡类型：{{bankType}}
+  </view>
+  <view class='deal'>
+    <checkbox-group  bindchange="checkboxChange"  class="checkbox">
+      <label>
+        <checkbox value='true'/>
+      </label>
+    </checkbox-group>
+    阅读并同意 <navigator url='../payDeal/payDeal' class='f_blue'>《银行卡支付用户协议》</navigator>
+  </view>
+  <view class='tixing'>
+    为保障银行打款正常，请您准确填写银行卡信息
+  </view>
+  <view class='foot_btn'>
+    <button class='b_green' bindtap='nextStep'>下一步</button>
+  </view>
+</view>

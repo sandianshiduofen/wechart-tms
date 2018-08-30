@@ -1,0 +1,8 @@
+
+<!--  -->
+<template name="no-data">
+<view class='no_find_data'>
+  <image src='../../../sources/images/no_find.png'/>
+  <view>{{noText}}</view>
+</view>
+</template>

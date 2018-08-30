@@ -1,0 +1,25 @@
+<!--pages/ucenter/contactNumber/contactNumber.wxml-->
+<view class='contactNumber'>
+  <view class='explain'>
+    <text>1、完善电话，有助于您查看收货记录
+      2、可填写多个收货人电话
+      3、发货时，请提醒商户使用您填写过的联系电话
+    </text>
+  </view>
+  <view>
+    <view class='list' wx:for="{{list}}" wx:key="index">
+      <text class='c999'>常用联系人{{index + 1}}</text>
+      <text class='tel'>{{item.phone}}</text>
+      <navigator url='../contactEdit/contactEdit?phone={{item.phone}}&id={{item.id}}&index={{index}}' class='edit' ><image src='../../../sources/images/ucenter2.png'></image></navigator>
+      <view class='del' bindtap='delPhone' data-list-id="{{item.id}}" data-number="{{item.number}}"  data-index="{{index}}"><image src='../../../sources/images/delHostory.png'></image></view>
+    </view>
+  </view>
+
+
+  <view class='foot_btn'>
+    <navigator url='../contactEdit/contactEdit'>
+      <button class='b_green'>新增常用联系人</button>
+    </navigator>
+  </view>
+
+</view>

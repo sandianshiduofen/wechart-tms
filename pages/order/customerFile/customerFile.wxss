@@ -1,0 +1,42 @@
+/* pages/order/customerFile/customerFile.wxss */
+page{
+  background: #f5f5f5;
+}
+
+.reminder{
+  padding: 0 20rpx;
+  line-height: 60rpx;
+}
+
+.list{
+  background: #fff;
+  padding: 20rpx;
+  line-height: 60rpx;
+  margin-bottom: 20rpx;
+}
+.li{
+  display: flex;
+}
+.li text:first-child{
+  color: #999;
+  width: 150rpx;
+}
+
+.li text:last-child{
+  width: 550rpx;
+}
+.li text.choose{
+  position: absolute;
+  border-radius: 10rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100rpx;
+  text-align: center;
+  background: #6abceb;
+  color: #fff;
+  right: 40rpx;
+}
+.noDate{
+  text-align: center;
+  padding-top: 50rpx;
+}

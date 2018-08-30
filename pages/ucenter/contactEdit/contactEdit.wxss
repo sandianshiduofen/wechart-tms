@@ -1,0 +1,25 @@
+/* pages/ucenter/contactEdit/contactEdit.wxss */
+.explain{
+  background: #ffebb0;
+  padding: 10rpx 30rpx;
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+}
+
+.tel_list{
+  display: flex;
+  margin: 0 20rpx;
+  border-bottom: 1px solid #eee;
+  padding:35rpx 0;
+}
+.title{
+  width: 200rpx;
+  text-align: center
+}
+.input_text{
+  width: 320rpx;
+}
+
+.foot_btn{
+  margin-top: 40rpx;
+}

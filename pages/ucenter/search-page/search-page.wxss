@@ -1,0 +1,77 @@
+
+ .img-absolute{
+  width:24rpx;
+  height:24rpx;
+}
+  /* 头部菜单 */
+  .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding:37rpx 0;
+    color:#353535;
+  }
+  .menu-price{
+    width:16rpx;
+    height:20rpx;
+    margin-left:10rpx;
+  }
+  .menu-screen{
+    width:24rpx;
+    height:20rpx;
+     margin-left:10rpx;
+  }
+
+  /* 筛选页面 */
+  .animation{
+   background: rgba(0,0,0,0.2); 
+  z-index: 9;
+  float: left;
+  right: -100vh;
+  width: 100%;
+  height: 100%;
+}
+.animation-content{
+  width: 90%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  padding:70rpx 0rpx 70rpx 30rpx;
+}
+.classify{
+  margin-bottom: 48rpx;
+}
+.classify-btn{
+  font-size: 24rpx;
+  color: #353535;
+  border-radius: 10rpx;
+  border:1px solid rgba(0,0,0,0.6);
+  padding:10rpx 50rpx;
+  margin-right:30rpx;
+  flex-shrink: 0;
+}
+.classify-input{
+   width:150rpx;
+   padding:5rpx 30rpx;
+  margin-right:0x;
+  text-align: center;
+}
+.active{
+  background-color: #c85554;
+  border:0;
+  padding:12rpx 52rpx;
+  color: #fff;
+}
+.line{
+  height:1px;
+  background-color:rgba(0,0,0,0.6);
+  width:50rpx;
+  margin-left:-30rpx;
+  }
+button{border-radius: 0;}
+.buttom-btn>button{
+  width:50%;
+  border: none;
+}

@@ -1,0 +1,26 @@
+<!--pages/ucenter/account/billing/billing.wxml-->
+<import src="./filtrate/filtrate.wxml"/>
+<import src="./filtrate/list.wxml"/>
+<import src="./filtrate/noData.wxml"/>
+<view class='billing'>
+  <view class='time_t'>
+    <view class='time_t_t'>{{currentData}}月：</view>
+    <view class='fil' bindtap='openFiltrate'>筛选</view>
+  </view>
+  <view class='billing_t'>
+    <view class='billing_price'>收入：￥{{incomeAmount}}</view>
+    <view class='billing_price'>支出：￥{{expenditureAmount}}</view>
+  </view>
+  <view>
+    <template is="filtrate-list" data="{{list}}"/>
+  </view>
+  <view wx:if="{{arriveEndText}}" class='no_data'>
+   {{arriveEndText}}
+  </view>
+  <view wx:if="{{filtrateShow}}" class='filtrate'>
+    <view class='filtrate_bg'></view>
+    <view class='filtrate_con'>
+      <template is="filtrate-c" data="{{filtrate,filtrateDate}}"/>
+    </view>
+  </view>
+</view>

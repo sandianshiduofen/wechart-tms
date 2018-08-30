@@ -1,0 +1,107 @@
+/* pages/order/orderSuccess/orderSuccess.wxss */
+.success{
+  text-align: center;
+  font-size: 40rpx;
+  line-height: 60rpx;
+  padding: 30rpx 0;
+}
+.success image{
+  height: 60rpx;
+  width: 60rpx;
+  margin: 0 20rpx -16rpx 0;
+}
+.reminder{
+  color: #999;
+  text-align: center;
+
+}
+.barCode{
+  padding: 60rpx 0 20rpx;
+  text-align: center;
+}
+.canvas1{
+  width: 600rpx;
+  height: 220rpx;
+  display: block;
+  margin: 0 auto;
+}
+.barCode view{
+  font-size: 36rpx;
+  padding-top: 10rpx;
+}
+.goods_amount{
+  text-align: center;
+  padding: 0 0 40rpx;
+}
+.btn_wraper{
+  overflow: hidden;
+  display: flex;
+  padding: 0 120rpx;
+}
+.order_btn{
+  width: 250rpx;
+  /* float: left; */
+  text-align: center;
+}
+.order_btn image{
+  height: 130rpx;
+  width: 130rpx;
+  display: block;
+  margin: 0 auto;
+}
+.order_btn view{
+  line-height: 80rpx;
+}
+
+.serviceStation{
+  padding: 60rpx 60rpx;
+  line-height: 60rpx;
+}
+
+.waybill_info{
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.waybill_bg{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success_btn{
+  padding-top: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+.success_btn navigator{
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 180rpx;
+  color: #fff;
+  text-align: center;
+  margin: 0 40rpx;
+}
+
+
+.content{
+  background: #fff;
+  width: 540rpx;
+  padding: 30rpx;
+  line-height: 60rpx;
+}
+.content view{
+  display: flex;
+}
+.content text{
+  width: 50%;
+}
+.content button{
+  width: 260rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+}

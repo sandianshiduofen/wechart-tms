@@ -1,0 +1,11 @@
+<!--pages/order/serviceStation/serviceStation.wxml-->
+<view class='serviceStation'>
+  <view>揽货网点：{{dot.name}}</view>
+  <view>揽货时间：{{dot.startBusinessHour}}--{{dot.endBusinessHour}}</view>
+  <view>联系电话：
+    <text wx:if="{{dot.tel1}}" class='f_blue' bindtap='callPhone' data-tel="{{dot.tel1}}">{{dot.tel1}} </text>
+    <text wx:if="{{dot.tel2}}" class='f_blue' bindtap='callPhone' data-tel="{{dot.tel2}}"> {{dot.tel2}} </text>
+    <text wx:if="{{dot.tel3}}" class='f_blue' bindtap='callPhone' data-tel="{{dot.tel3}}"> {{dot.tel3}} </text>
+  </view>
+  <view>网点地址：{{dot.province}}{{dot.city}}{{dot.area}}{{dot.address}}</view>
+</view>

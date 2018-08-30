@@ -1,0 +1,13 @@
+/* pages/ucenter/account/payDeal/payDeal.wxss */
+.payDeal{
+  padding: 0 30rpx;
+}
+.title{
+  text-align: center;
+  font-size: 34rpx;
+  padding: 30rpx 0 2rpx;
+}
+text{
+  font-size: 26rpx;
+  color: #666;
+}

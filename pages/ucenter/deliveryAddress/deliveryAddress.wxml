@@ -1,0 +1,50 @@
+<!--pages/ucenter/deliveryAddress/deliveryAddress.wxml-->
+
+<import src="../../../modules/noData/noData.wxml"/>
+<view class='deliveryAddress'>
+  <view class='search'>
+    <input bindinput='searchBind' type='text' placeholder='收货方、电话'/>
+    <image bindtap='searchSubmit' src='../../../sources/images/search1.png'/>
+  </view>
+  <view class='content' wx:if="{{list.length>0}}">
+    <view class='list' wx:for="{{list}}" wx:key="{{item.id}}">
+      <view bindtap='chooseAddr' data-index="{{index}}">
+        <view class='list_t'>
+          <text class='company'>{{item.company}}</text>
+          <text class='default f_red' wx:if="{{item.isDefault==1}}">默认地址</text>
+        </view>
+        <view class='list_c'>  
+          <text class='name' wx:if="{{item.contact}}">{{item.contact}}</text>
+          <text class='tel'>{{item.phone}}</text>
+        </view>
+        <view class='address'>
+          {{item.proName}}{{item.cityName}}{{item.areaName}}{{item.detailed}}
+        </view>
+      </view>
+      <view class='list_b'>
+        <view class='edit_moren'>
+          <view wx:if="{{item.isDefault==0}}" bindtap='setDefault' data-list-id="{{item.id}}">
+            <view class='radio'></view>  设置为默认发货方
+          </view>
+        </view>
+        <navigator url='../deliveryDetails/deliveryDetails?edit={{item.list}}' class='edit'>
+          <image src='../../../sources/images/ucenter1.png'/>
+          <text>编辑</text>
+        </navigator>
+        <view class='del' bindtap='delAddress' data-list-id='{{item.id}}' data-is-default="{{item.isDefault}}">
+          <image src='../../../sources/images/ucenter2.png'/>
+          <text>删除</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class='content' wx:else>
+    <template is="no-data" data="{{noText}}"/>
+  </view>
+  <view class='foot_wraper'>
+    <view class='foot_button'>
+      <button bindtap='addAddress' class='b_green'>新增发货地址</button>
+    </view>
+  </view>
+</view>
